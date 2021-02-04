@@ -38,7 +38,5 @@ namespace Calculator
         {
            return c * c * d;
         }
-
-
     }
 }
