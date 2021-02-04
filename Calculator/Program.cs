@@ -8,7 +8,10 @@ namespace Calculator
         {
             Console.WriteLine("Hello World!");
 
-            Console.WriteLine("Hello Verden");
+
+
+            Console.WriteLine("Hej med dig ");
+           
         }
     }
 }
