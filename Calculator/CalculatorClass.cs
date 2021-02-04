@@ -28,5 +28,17 @@ namespace Calculator
         {
             return a / b;
         }
+
+        public double TestMath(double q, double z)
+        {
+            return q  /  z;
+        }
+
+        public double tech(double d, double c)
+        {
+           return c * c * d;
+        }
+
+
     }
 }
