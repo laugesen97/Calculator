@@ -52,11 +52,12 @@ namespace CalculaterTestProject
         [TestCase(6, 4, 10)]
         [TestCase(2, 1, 3)]
         [TestCase(6, -4, 2)]
+        [TestCase(4,-4,0)]
         
-
         public void Add(int x, int y, int z)
         {
             Assert.AreEqual(uut.Add(x,y),z);
         }
+
     }
 }
