@@ -59,5 +59,11 @@ namespace CalculaterTestProject
             Assert.AreEqual(uut.Add(x,y),z);
         }
 
+        [Test]
+        public void Add_2plus10_isEqual12JenkinsTest()
+        {
+            Assert.That(uut.Add(2,10),Is.EqualTo(12));
+        }
+
     }
 }
