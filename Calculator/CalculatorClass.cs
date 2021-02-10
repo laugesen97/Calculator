@@ -47,6 +47,8 @@ namespace Calculator
 
             var p = Math.Sqrt(sqh);
 
+            return p;
+
         }
     }
 }
