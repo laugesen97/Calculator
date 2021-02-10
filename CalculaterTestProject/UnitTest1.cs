@@ -45,10 +45,37 @@ namespace CalculaterTestProject
             Assert.That(uut.Power(A,B),Is.EqualTo(C));
         }
 
-        [TestCase(99, 10, 9,9)]
-        [TestCase(49, 7,7)]
-        [TestCase(22,2, 11,1, 2)]
-        public void Devide_ADevidedByB_isEqualC(double A, double B, double C)
+        [Test]
+        public void Power_3lifted3_isEqual27()
+        {
+            Assert.That(uut.Power(3,3),Is.EqualTo(27));
+        }
+
+        [Test]
+        public void Devide_4DevidedBy2_isEqual2()
+        {
+            Assert.That(uut.Devider(4,2),Is.EqualTo(2));
+        }
+
+        [TestCase(6, 4, 10)]
+        [TestCase(2, 1, 3)]
+        [TestCase(6, -4, 2)]
+        [TestCase(4,-4,0)]
+        
+        public void Add(int x, int y, int z)
+        {
+            Assert.AreEqual(uut.Add(x,y),z);
+        }
+
+        [Test]
+        public void Add_2plus10_isEqual12JenkinsTest()
+        {
+            Assert.That(uut.Add(2,10),Is.EqualTo(12));
+        }
+
+        [Test]
+
+        public void Add_2plus11_isEqualto12Jenkins()
         {
             Assert.That(uut.Devider(A,B),Is.EqualTo(C));
         }
