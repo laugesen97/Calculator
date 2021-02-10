@@ -40,8 +40,9 @@ namespace Calculator
         {
             var sqh = a * a + b * b;
 
-            var p = Math.Sqrt(sqh);
+            var c = Math.Sqrt(sqh);
 
+            return Math.Round(c, 1);
         }
     }
 }

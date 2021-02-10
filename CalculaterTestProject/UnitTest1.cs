@@ -15,22 +15,22 @@ namespace CalculaterTestProject
 
         [TestCase(2,4,6)]
         [TestCase(100, 450, 550)]
-        [TestCase(234, 11,2, 245,2)]
+        [TestCase(234, 11, 245)]
         public void Add_AplusB_isEqualToC(double A, double B, double C)
         {
             Assert.That(uut.Add(A, B),Is.EqualTo(C));
         }
 
         [TestCase(11, 7, 4)]
-        [TestCase(123, 23,1, 99,9)]
-        [TestCase(23,24, 0,24, 23)]
+        [TestCase(123, 23,100)]
+        [TestCase(23,24, -1)]
         public void Subtract_AminusB_isEqualToC(double A, double B, double C)
         {
             Assert.That(uut.Subtract(A,B),Is.EqualTo(C));
         }
 
         [TestCase(2, 3, 6)]
-        [TestCase(99, 10, 999)]
+        [TestCase(99, 10, 990)]
         [TestCase(12, 12, 144)]
         public void Multiply_AtimesB_isEqualToC(double A, double B, double C)
         {
@@ -39,7 +39,7 @@ namespace CalculaterTestProject
 
         [TestCase(2, 3, 8)]
         [TestCase(7, 2, 49)]
-        [TestCase(5, 4, 525)]
+        [TestCase(5, 4, 625)]
         public void Power_AliftedB_isEqualC(double A, double B, double C)
         {
             Assert.That(uut.Power(A,B),Is.EqualTo(C));
@@ -57,10 +57,14 @@ namespace CalculaterTestProject
             Assert.That(uut.Devider(4,2),Is.EqualTo(2));
         }
 
+
+        [TestCase(3,4,5)]
+        [TestCase(10, 11, 14.9)]
+        [TestCase(2,5,5.4 )]
         [Test]
-        public void Pythagoras_4_Times_3_IsEqual5()
+        public void Pythagoras_a_Times_b_IsEqualc(double a, double b, double c)
         {
-            Assert.That(uut.Pytagoras(4, 3, Is.EqualTo(5)));
+            Assert.That(uut.Pytagoras(a, b), Is.EqualTo(c));
         }
 
         [TestCase(6, 4, 10)]
@@ -72,18 +76,6 @@ namespace CalculaterTestProject
             Assert.AreEqual(uut.Add(x,y),z);
         }
 
-        [Test]
-        public void Add_2plus10_isEqual12JenkinsTest()
-        {
-            Assert.That(uut.Add(2,10),Is.EqualTo(12));
-        }
-
-        [Test]
-
-        public void Add_2plus11_isEqualto12Jenkins()
-        {
-            Assert.That(uut.Devider(A,B),Is.EqualTo(C));
-        }
-
+       
     }
 }
