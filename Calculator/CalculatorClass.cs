@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 
 namespace Calculator
 {
@@ -32,6 +33,17 @@ namespace Calculator
         public double circleAreal(double r)
         {
            return Math.Round(Math.Pow(r, 2) * Math.PI,2);
+        }
+
+
+        public double Pytagoras(double a, double b)
+        {
+            var sqh = a * a + b * b;
+
+            var p = Math.Sqrt(sqh);
+
+            return p;
+
         }
     }
 }
