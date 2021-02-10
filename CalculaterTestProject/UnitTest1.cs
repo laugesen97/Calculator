@@ -52,7 +52,7 @@ namespace CalculaterTestProject
         [Test]
         public void Pythagoras_4_Times_3_IsEqual5()
         {
-            Assert.That(uut.Pytagoras(4, 3, Is.EqualTo(5)));
+            Assert.That(uut.Pytagoras(4, 3), Is.EqualTo(5));
         }
 
 
