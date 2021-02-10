@@ -7,24 +7,9 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-           Console.BackgroundColor = ConsoleColor.Blue;
+           Console.BackgroundColor = ConsoleColor.DarkRed;
 
             Console.WriteLine("Hello World!");
-
-            Console.WriteLine("Hej med dig ");
-
-            global::System.Console.WriteLine("test test");
-
-            
-
-
-            Console.WriteLine("Helleo");
-
-           
-
-
         }
     }
-
-    public class TestClass { }
 }
