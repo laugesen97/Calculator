@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http.Headers;
 
 namespace Calculator
 {
@@ -37,6 +38,15 @@ namespace Calculator
         public double tech(double d, double c)
         {
            return c * c * d;
+        }
+
+
+        public double Pytagoras(double a, double b)
+        {
+            var sqh = a * a + b * b;
+
+            var p = Math.Sqrt(sqh);
+
         }
     }
 }
