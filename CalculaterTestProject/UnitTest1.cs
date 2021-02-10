@@ -13,28 +13,36 @@ namespace CalculaterTestProject
             uut = new CalculatorClass();
         }
 
-        [Test]
-        public void Add_2plus3_isEqualTo5()
+        [TestCase(2,4,6)]
+        [TestCase(100, 450, 550)]
+        [TestCase(234, 11,2, 245,2)]
+        public void Add_AplusB_isEqualToC(double A, double B, double C)
         {
-            Assert.That(uut.Add(2,3),Is.EqualTo(5));
+            Assert.That(uut.Add(A, B),Is.EqualTo(C));
         }
 
-        [Test]
-        public void Subtract_8minus3_isEqualTo5()
+        [TestCase(11, 7, 4)]
+        [TestCase(123, 23,1, 99,9)]
+        [TestCase(23,24, 0,24, 23)]
+        public void Subtract_AminusB_isEqualToC(double A, double B, double C)
         {
-            Assert.That(uut.Subtract(8,3),Is.EqualTo(5));
+            Assert.That(uut.Subtract(A,B),Is.EqualTo(C));
         }
 
-        [Test]
-        public void Multiply_2times4_isEqualTo8()
+        [TestCase(2, 3, 6)]
+        [TestCase(99, 10, 999)]
+        [TestCase(12, 12, 144)]
+        public void Multiply_AtimesB_isEqualToC(double A, double B, double C)
         {
-            Assert.That(uut.Multiply(2,4),Is.EqualTo(8));
+            Assert.That(uut.Multiply(A,B),Is.EqualTo(C));
         }
 
-        [Test]
-        public void Multiplu_10times10_EquelTo100()
+        [TestCase(2, 3, 8)]
+        [TestCase(7, 2, 49)]
+        [TestCase(5, 4, 525)]
+        public void Power_AliftedB_isEqualC(double A, double B, double C)
         {
-            Assert.That(uut.Multiply(10, 10), Is.EqualTo(100));
+            Assert.That(uut.Power(A,B),Is.EqualTo(C));
         }
 
         [Test]
@@ -49,17 +57,11 @@ namespace CalculaterTestProject
             Assert.That(uut.Devider(4,2),Is.EqualTo(2));
         }
 
-
-        [TestCase(3,4,5)]
-        [TestCase(24,10,26)]
-        [TestCase(6,7,9.22)]
-        [TestCase(4,8,8.94)]
         [Test]
-        public void Pythagoras_a_Times_b_IsEqualc(double a, double b, double c)
+        public void Pythagoras_4_Times_3_IsEqual5()
         {
-            Assert.That(uut.Pytagoras(a, b), Is.EqualTo(c));
+            Assert.That(uut.Pytagoras(4, 3, Is.EqualTo(5)));
         }
-
 
         [TestCase(6, 4, 10)]
         [TestCase(2, 1, 3)]
@@ -80,18 +82,8 @@ namespace CalculaterTestProject
 
         public void Add_2plus11_isEqualto12Jenkins()
         {
-            Assert.That(uut.Add(2, 11), Is.EqualTo(13));
+            Assert.That(uut.Devider(A,B),Is.EqualTo(C));
         }
-
-        [TestCase(2,12.57)]
-        [TestCase(4, 50.27)]
-        [TestCase(3.4, 36.32)]
-        [TestCase(9, 254.47)]
-        public void CalculateCircleArea_WithDifferentR(double r, double result)
-        {
-         Assert.That(uut.circleAreal(r),Is.EqualTo(result));
-        }
-
 
     }
 }

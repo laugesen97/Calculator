@@ -7,6 +7,8 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
+           Console.BackgroundColor = ConsoleColor.DarkRed;
+
             Console.WriteLine("Hello World!");
         }
     }
