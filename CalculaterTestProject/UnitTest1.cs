@@ -53,7 +53,6 @@ namespace CalculaterTestProject
         [TestCase(2, 1, 3)]
         [TestCase(6, -4, 2)]
         [TestCase(4,-4,0)]
-        
         public void Add(int x, int y, int z)
         {
             Assert.AreEqual(uut.Add(x,y),z);
@@ -71,6 +70,16 @@ namespace CalculaterTestProject
         {
             Assert.That(uut.Add(2, 11), Is.EqualTo(13));
         }
+
+        [TestCase(2,12.57)]
+        [TestCase(4, 50.27)]
+        [TestCase(3.4, 36.32)]
+        [TestCase(9, 254.47)]
+        public void CalculateCircleArea_WithDifferentR(double r, double result)
+        {
+         Assert.That(uut.circleAreal(r),Is.EqualTo(result));
+        }
+
 
     }
 }
