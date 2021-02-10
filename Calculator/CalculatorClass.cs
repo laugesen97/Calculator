@@ -32,7 +32,7 @@ namespace Calculator
 
         public double circleAreal(double r)
         {
-           return Math.Round(Math.Pow(r, 2) * Math.PI,2);
+           return Math.Round(Math.Pow(r, 2) * Math.PI,1);
         }
 
 
