@@ -30,14 +30,9 @@ namespace Calculator
             return a / b;
         }
 
-        public double TestMath(double q, double z)
+        public double circleAreal(double r)
         {
-            return q  /  z;
-        }
-
-        public double tech(double d, double c)
-        {
-           return c * c * d;
+           return Math.Round(Math.Pow(r, 2) * Math.PI,2);
         }
 
 
@@ -46,6 +41,7 @@ namespace Calculator
             var sqh = a * a + b * b;
 
             var p = Math.Sqrt(sqh);
+
         }
     }
 }

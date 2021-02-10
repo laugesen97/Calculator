@@ -57,11 +57,16 @@ namespace CalculaterTestProject
             Assert.That(uut.Devider(4,2),Is.EqualTo(2));
         }
 
+        [Test]
+        public void Pythagoras_4_Times_3_IsEqual5()
+        {
+            Assert.That(uut.Pytagoras(4, 3, Is.EqualTo(5)));
+        }
+
         [TestCase(6, 4, 10)]
         [TestCase(2, 1, 3)]
         [TestCase(6, -4, 2)]
         [TestCase(4,-4,0)]
-        
         public void Add(int x, int y, int z)
         {
             Assert.AreEqual(uut.Add(x,y),z);
@@ -79,5 +84,6 @@ namespace CalculaterTestProject
         {
             Assert.That(uut.Devider(A,B),Is.EqualTo(C));
         }
+
     }
 }
