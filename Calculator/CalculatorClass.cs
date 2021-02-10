@@ -46,7 +46,6 @@ namespace Calculator
             var sqh = a * a + b * b;
 
             var p = Math.Sqrt(sqh);
-
         }
     }
 }
