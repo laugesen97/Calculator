@@ -42,7 +42,7 @@ namespace Calculator
 
             var c = Math.Sqrt(sqh);
 
-            return c;
+            return Math.Round(c,2);
 
         }
     }
