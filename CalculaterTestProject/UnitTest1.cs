@@ -1,3 +1,4 @@
+using System;
 using System.Security.Cryptography.X509Certificates;
 using Calculator;
 using NUnit.Framework;
@@ -68,6 +69,13 @@ namespace CalculaterTestProject
         public void CirkleAreal_rpow2TimesPi_IsEqualToa(double r, double a)
         {
             Assert.That(uut.circleAreal(r), Is.EqualTo(a));
+        }
+        [TestCase(100,0)]
+        [TestCase(0, 0)]
+        [TestCase(-100, 0)]
+        public void Divide_DivisionBy0_CorrectExceptionTrue(double a, double b)
+        {
+            Assert.Throws<Exception>(() => uut.Devider(a,b));
         }
 
     }

@@ -27,7 +27,15 @@ namespace Calculator
 
         public double Devider(double a, double b)
         {
-            return a / b;
+            if (b != 0)
+            {
+                return a / b;
+            }
+            else
+            {
+                throw new Exception("Can't devide by 0.");
+            }
+
         }
 
         public double circleAreal(double r)
